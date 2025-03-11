@@ -46,12 +46,21 @@
 }
 
 body {
-    font-family: 'Comic Neue', cursive;
+    font-family: 'Comic Neue'; /* Removed cursive fallback */
+    font-weight: bold;
+    font-style: italic;
     margin: 0;
     padding: 20px;
     background: var(--bg);
     color: #333;
     line-height: 1.6;
+}
+
+/* Force inheritance */
+* {
+    font-family: inherit;
+    font-weight: inherit;
+    font-style: inherit;
 }
 
 .profile-card {
